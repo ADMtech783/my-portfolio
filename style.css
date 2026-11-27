@@ -995,3 +995,131 @@ button:focus-visible {
   outline-offset: 5px;
   border-radius: 3px;
 }
+/* =========================================
+   CONTACT SECTION — MOBILE & DESKTOP FIX
+========================================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact .section-title {
+  margin-bottom: 25px;
+}
+
+.contact-text {
+  margin-bottom: 35px;
+}
+
+/* Contact information */
+
+.contact-details {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-details p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-details strong {
+  color: var(--white);
+}
+
+.contact-details a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.contact-details a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* Contact buttons */
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact-buttons .btn {
+  min-width: 190px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 65px 6% 70px;
+  }
+
+  .contact .section-title {
+    margin-bottom: 25px;
+  }
+
+  .contact-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .contact-details {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .contact-details p {
+    font-size: 15px;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-buttons .btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .contact-details p {
+    font-size: 14px;
+  }
+}
+/* =========================================
+   YOUNG ADMtech — DISCO COLOUR EFFECT
+   VISUAL PORTFOLIO
+========================================= */
+
+.hero h1,
+.hero h1 span {
+  animation: portfolioDisco 4s steps(1, end) infinite !important;
+}
+
+@keyframes portfolioDisco {
+  0%, 100% { color: #ff1744; }
+  16% { color: #00bfff; }
+  32% { color: #39ff14; }
+  48% { color: #bf00ff; }
+  64% { color: #ffea00; }
+  80% { color: #ff9100; }
+}

@@ -271,4 +271,21 @@ body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}/* =========================================
+   YOUNG ADMtech — DISCO COLOUR EFFECT
+   HOME PAGE
+========================================= */
+
+.entry h1,
+.entry h1 span {
+  animation: entryDisco 4s steps(1, end) infinite !important;
+}
+
+@keyframes entryDisco {
+  0%, 100% { color: #ff1744; }
+  16% { color: #00bfff; }
+  32% { color: #39ff14; }
+  48% { color: #bf00ff; }
+  64% { color: #ffea00; }
+  80% { color: #ff9100; }
 }
