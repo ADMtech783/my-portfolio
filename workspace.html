@@ -1,37 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUNG ADMtech</title>
-    <link rel="stylesheet" href="workspace.css">
-</head>
-<body>
-    <div class="workspace">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <aside class="sidebar">
-      <p class="sidebar-title">EXPLORER</p>
-      <button class="file active" data-file="about">about.js</button>
-      <button class="file" data-file="projects">projects.js</button>
-      <button class="file" data-file="skills">skills.js</button>
-      <button class="file" data-file="contact">contact.js</button>
-      <a href="index.html" class="back">&larr; Back to home</a>
+  <title>Developer Workspace | YOUNG ADMtech</title>
+
+  <meta
+    name="description"
+    content="Explore the developer workspace of YOUNG ADMtech. Discover development projects, technical skills, profile information and an interactive terminal."
+  >
+
+  <meta name="author" content="YOUNG ADMtech">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090c">
+
+  <link
+    rel="canonical"
+    href="https://admtech783.github.io/my-portfolio/workspace.html"
+  >
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="YOUNG ADMtech">
+  <meta property="og:title" content="Developer Workspace | YOUNG ADMtech">
+  <meta
+    property="og:description"
+    content="Explore my developer profile, technical skills, projects and interactive workspace."
+  >
+  <meta
+    property="og:url"
+    content="https://admtech783.github.io/my-portfolio/workspace.html"
+  >
+  <meta
+    property="og:image"
+    content="https://admtech783.github.io/my-portfolio/photo.jpg"
+  >
+
+  <link rel="stylesheet" href="workspace.css">
+
+  <script src="workspace.js" defer></script>
+</head>
+
+<body>
+
+  <main class="workspace">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Workspace explorer">
+
+      <div class="sidebar-brand">
+        <a href="index.html" class="brand-name">
+          YOUNG <span>ADMtech</span>
+        </a>
+        <p>DEVELOPER WORKSPACE</p>
+      </div>
+
+      <div class="explorer-heading">
+        <span>EXPLORER</span>
+        <span class="explorer-dots" aria-hidden="true">•••</span>
+      </div>
+
+      <div class="project-folder">
+        <span class="folder-icon" aria-hidden="true">▾</span>
+        <span>ADMTECH-PORTFOLIO</span>
+      </div>
+
+      <nav class="file-list" aria-label="Workspace files">
+
+        <button
+          class="file active"
+          data-file="about"
+          type="button"
+          aria-current="page"
+        >
+          <span class="file-icon js-icon" aria-hidden="true">JS</span>
+          <span>about.js</span>
+        </button>
+
+        <button class="file" data-file="projects" type="button">
+          <span class="file-icon js-icon" aria-hidden="true">JS</span>
+          <span>projects.js</span>
+        </button>
+
+        <button class="file" data-file="skills" type="button">
+          <span class="file-icon js-icon" aria-hidden="true">JS</span>
+          <span>skills.js</span>
+        </button>
+
+        <button class="file" data-file="contact" type="button">
+          <span class="file-icon js-icon" aria-hidden="true">JS</span>
+          <span>contact.js</span>
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-divider"></div>
+
+        <a href="portfolio.html" class="back">
+          <span aria-hidden="true">←</span>
+          View Visual Portfolio
+        </a>
+
+        <a href="index.html" class="back">
+          <span aria-hidden="true">⌂</span>
+          Back to Home
+        </a>
+      </div>
+
     </aside>
 
-    <section class="editor">
+    <!-- MAIN EDITOR -->
+    <section class="editor" aria-label="Developer code editor">
+
+      <!-- TOP BAR -->
+      <header class="editor-topbar">
+
+        <div class="editor-breadcrumb">
+          <span>ADMTECH-PORTFOLIO</span>
+          <span class="breadcrumb-arrow" aria-hidden="true">/</span>
+          <span id="breadcrumbFile">about.js</span>
+        </div>
+
+        <a href="portfolio.html" class="portfolio-link">
+          View Portfolio ↗
+        </a>
+
+      </header>
+
+      <!-- TAB BAR -->
       <div class="tab-bar">
-        <span class="tab" id="tabName">about.js</span>
+
+        <div class="tab active">
+          <span class="file-icon js-icon" aria-hidden="true">JS</span>
+          <span id="tabName">about.js</span>
+          <span class="tab-dot" aria-hidden="true"></span>
+        </div>
+
       </div>
-      <pre class="code" id="codeView">const developer = {
+
+      <!-- EDITOR CONTENT -->
+      <div class="editor-content">
+
+        <div class="editor-heading">
+          <div>
+            <p class="editor-label">SOURCE FILE</p>
+            <h1 id="editorTitle">Developer Profile</h1>
+          </div>
+
+          <span class="language-label">JavaScript</span>
+        </div>
+
+        <div class="code-container">
+
+          <div
+            class="line-numbers"
+            id="lineNumbers"
+            aria-hidden="true"
+          >
+            1
+          </div>
+
+          <pre
+            class="code"
+            id="codeView"
+            aria-label="Selected JavaScript example"
+          ><code>const developer = {
   name: "Young Admtech",
   role: "Web Designer & Developer",
   location: "Nigeria",
   focus: "Websites for local businesses",
   brand: "YOUNG ADMtech"
-};</pre>
+};</code></pre>
+
+        </div>
+
+        <div class="editor-hint">
+          <span class="hint-icon" aria-hidden="true">i</span>
+          Select a file from the Explorer to explore my work.
+        </div>
+
+      </div>
+
+      <!-- INTERACTIVE TERMINAL -->
+      <section
+        class="terminal-panel"
+        aria-label="Interactive developer terminal"
+      >
+
+        <div class="terminal-header">
+
+          <div class="terminal-tabs">
+            <span class="terminal-tab active">TERMINAL</span>
+            <span class="terminal-tab">COMMAND LINE</span>
+          </div>
+
+          <span
+            class="terminal-indicator"
+            title="Terminal ready"
+            aria-label="Terminal ready"
+          >●</span>
+
+        </div>
+
+        <div class="terminal-content">
+
+          <div class="terminal-welcome">
+
+            <p class="terminal-line">
+              <span class="terminal-prompt">admtech@portfolio:~$</span>
+              Welcome to my developer workspace.
+            </p>
+
+            <p class="terminal-description">
+              Explore my profile, projects, skills and contact information
+              using the commands below.
+            </p>
+
+            <p class="terminal-success">
+              <span aria-hidden="true">✓</span>
+              Interactive terminal ready.
+            </p>
+
+            <p class="terminal-help">
+              Type <strong>help</strong> to see the available commands.
+            </p>
+
+          </div>
+
+          <!-- Command history and results appear here -->
+          <div
+            class="terminal-output"
+            id="terminalOutput"
+            aria-live="polite"
+            aria-relevant="additions"
+          ></div>
+
+          <!-- Terminal command input -->
+          <form
+            class="terminal-form"
+            id="terminalForm"
+            autocomplete="off"
+          >
+
+            <label class="terminal-prompt" for="terminalInput">
+              admtech@portfolio:~$
+            </label>
+
+            <input
+              type="text"
+              id="terminalInput"
+              name="command"
+              placeholder="Type a command..."
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Enter a terminal command"
+            >
+
+            <button type="submit" class="terminal-run">
+              Run
+            </button>
+
+          </form>
+
+          <p class="terminal-shortcuts">
+            Try: help · about · projects · skills · contact · clear
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- STATUS BAR -->
+      <footer class="status-bar">
+
+        <div class="status-left">
+          <span aria-hidden="true">●</span>
+          <span>YOUNG ADMtech</span>
+          <span class="status-divider">|</span>
+          <span>Portfolio</span>
+        </div>
+
+        <div class="status-right">
+          <span>JavaScript</span>
+          <span>UTF-8</span>
+          <span id="terminalStatus">Terminal Ready</span>
+        </div>
+
+      </footer>
+
     </section>
 
-  </div>
-  <script src="workspace.js"></script>
+  </main>
+
 </body>
 </html>
